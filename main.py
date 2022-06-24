@@ -1,4 +1,5 @@
 import operaciones
+import time
 
 def main():
     Suma = operaciones.sumar(a=float(input('Introduce el primer numero: ')),
@@ -22,3 +23,11 @@ def main():
 if __name__ == '__main__':
     main()
 else: pass
+
+hora = time.strftime('%H')
+minutos = time.strftime('%M')
+
+if int(hora) >= 19:
+    print ("Es hora de irse a casa")
+else:
+    print ("Quedan {} horas y {} minutos para irnos a casa".format(18- int(hora), 59-int(minutos)))
